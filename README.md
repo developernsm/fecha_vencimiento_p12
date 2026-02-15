@@ -1,7 +1,4 @@
-# fecha_vencimiento_p12
-
-# Funcion para obtener Vecha de vencimiento de los Certificados de firma digital (en PHP pero puedes llevar esta logica a cualquier lenguaje de programacion)
-
+<?php
   function verificarCertificado($rutaP12, $password)
   {
         if (!file_exists($rutaP12)) {
@@ -41,28 +38,5 @@
             'dias_restantes' => $diasRestantes
         ];
    }
-   
-   # Uso:
-   
-   $resultado = validarVencimiento($certP12Path, $certPassword);
-   
-   # Resultado:
-   
-   JSON:
-   
-   {
-	  "valido_desde": "2025-11-25 14:49:00",
-	  "valido_hasta": "2026-11-25 14:49:00",
-	  "expirado": false,
-	  "dias_restantes": 282
-   }
-   
-   PHP ARRAY:
-   
-   array(4) {
-	  ["valido_desde"]=> string(19) "2025-11-25 14:49:00"
-	  ["valido_hasta"]=> string(19) "2026-11-25 14:49:00"
-	  ["expirado"]=> bool(false)
-	  ["dias_restantes"]=> float(282)
-  }
 
+  
